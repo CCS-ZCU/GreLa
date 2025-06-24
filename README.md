@@ -35,6 +35,53 @@ In the **works** table, we are gradually adding additional metadata for individu
 
 The database is implemented using DuckDB, an open-source column-oriented Relational Database Management System (RDBMS) designed to provide high performance on complex queries against large databases.
 
+## Database Schema Documentation
+
+### Table: `sentences`
+
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| position | INTEGER | YES | N/A |
+| text | VARCHAR | YES | N/A |
+
+### Table: `tokens`
+
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| token_text | VARCHAR | YES | N/A |
+| lemma | VARCHAR | YES | N/A |
+| pos | VARCHAR | YES | N/A |
+| char_start | INTEGER | YES | N/A |
+| char_end | INTEGER | YES | N/A |
+| token_id | BIGINT | YES | N/A |
+
+### Table: `works`
+
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| grela_source | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| author | VARCHAR | YES | N/A |
+| title | VARCHAR | YES | N/A |
+| not_before | DOUBLE | YES | N/A |
+| not_after | DOUBLE | YES | N/A |
+| lagt_tlg_epithet | VARCHAR | YES | N/A |
+| lagt_genre | VARCHAR | YES | N/A |
+| lagt_provenience | VARCHAR | YES | N/A |
+| noscemus_place | VARCHAR | YES | N/A |
+| noscemus_genre | VARCHAR | YES | N/A |
+| noscemus_discipline | VARCHAR | YES | N/A |
+| title_short | VARCHAR | YES | N/A |
+| emlap_noscemus_id | DOUBLE | YES | N/A |
+| place_publication | VARCHAR | YES | N/A |
+| place_geonames | VARCHAR | YES | N/A |
+| author_viaf | DOUBLE | YES | N/A |
+| title_viaf | DOUBLE | YES | N/A |
+| date_random | DOUBLE | YES | N/A |
 
 
 
