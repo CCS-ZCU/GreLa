@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/GreLa.iml" filepath="$PROJECT_DIR$/.idea/GreLa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../labyrinth/.idea/labyrinth.iml" filepath="$PROJECT_DIR$/../labyrinth/.idea/labyrinth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../latin-contextual-embeddings/.idea/latin-contextual-embeddings.iml" filepath="$PROJECT_DIR$/../latin-contextual-embeddings/.idea/latin-contextual-embeddings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" filepath="$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" />
+      <module fileurl="file:///srv/models/.idea/models.iml" filepath="/srv/models/.idea/models.iml" />
     </modules>
   </component>
 </project>
