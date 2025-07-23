@@ -54,13 +54,15 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "last_opened_file_path": "/home/jupyter-vojta/notebooks/GreLa/scripts",
+    "last_opened_file_path": "/home/jupyter-vojta/notebooks/GreLa/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,7 +89,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33055556" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.185" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.1" />
@@ -101,7 +103,7 @@
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Jupyter Variables" side_tool="true" />
       <window_info anchor="right" id="Notifications" order="0" weight="0.22118056" />
-      <window_info active="true" anchor="right" id="AIAssistant" order="1" visible="true" weight="0.22118056" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.28993055" />
       <window_info anchor="right" id="Database" order="2" weight="0.25" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
@@ -110,6 +112,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/../latin-textreuse/scripts" />
+      <recent name="$PROJECT_DIR$/../vulgate_subcorpora" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/../labyrinth/scripts" />
     </key>
@@ -124,8 +129,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-6be00b7b0f42-JavaScript-PY-252.23309.36" />
-        <option value="bundled-python-sdk-1eec2b582c1f-32658010c498-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23309.36" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-PY-252.23892.194" />
+        <option value="bundled-python-sdk-1d02c8f8a5de-29f63f91a358-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.194" />
       </set>
     </attachedChunks>
   </component>
@@ -145,7 +150,12 @@
       <workItem from="1751531270466" duration="13755000" />
       <workItem from="1751834750494" duration="18363000" />
       <workItem from="1751880884334" duration="51746000" />
-      <workItem from="1752655319250" duration="63096000" />
+      <workItem from="1752655319250" duration="65210000" />
+      <workItem from="1753082847746" duration="7129000" />
+      <workItem from="1753099931691" duration="5618000" />
+      <workItem from="1753132753256" duration="12985000" />
+      <workItem from="1753188536699" duration="4686000" />
+      <workItem from="1753194271311" duration="9305000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,8 @@
     <orderEntry type="module" module-name="latin-contextual-embeddings" />
     <orderEntry type="module" module-name="models" />
     <orderEntry type="module" module-name="latin-textreuse" />
+    <orderEntry type="module" module-name="cc_sents_jsons_duplicated" />
+    <orderEntry type="module" module-name="cc_rawtexts" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />
