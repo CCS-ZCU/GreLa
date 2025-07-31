@@ -2,7 +2,7 @@
 
 ---
 ## Authors
-* Vojtěch Kaše
+* Vojtěch Kaše (& team of collaborators)
 
 
 ## License
@@ -25,6 +25,7 @@ GreLa is a comprehensive corpus of Greek and Latin literature from the 8 c. BCE 
 | emlap       | 73        | 220,846       | 3,495,212   |
 | lagt        | 1,957     | 2,703,678     | 35,808,742  |
 | noscemus    | 996       | 11,802,783    | 139,401,899 |
+| vulgate     | 73        | 35,254        | 603,091     |
 
 
 GreLa is structured as a relational database currently consisting of three tables: **works**, **sentences**, and **tokens**. The tables are mapped on each other using the keys `grela_id` and `sentence_id`. `grela_id` is formed as a combination of the subcorpus akronym and the ID of the work in the respective subcorpus (`<subcorpus-akronym>_<work-id>`, e.g. `cc_1271O`). `sentence_id` extends `grela_id` by positional index of the sentence, starting from 0 (e.g. `cc_12710_0` and `cc_12710_1` stand for the first two sentences from the work with the ID 12710 in *Corpus Corporum*).
@@ -87,11 +88,13 @@ The database is implemented using DuckDB, an open-source column-oriented Relatio
 
 ## Getting started
 
+GreLa is now accessible via an API. To get started, check [this](https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb) Google Colab notebook.
+
 ```python
 # currently, we maintain the database on our CCS-Lab server
 
-import duckdb
-conn = duckdb.connect('/srv/data/greek/grela.duckdb', read_only=True)
+
+
 ```
 
 ## How to cite

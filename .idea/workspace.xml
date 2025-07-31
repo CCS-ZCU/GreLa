@@ -78,7 +78,7 @@
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
       <window_info id="R_Remote_Host" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13923612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23368055" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="R_Jobs" />
@@ -92,12 +92,13 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.07833333" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.215" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
       <window_info anchor="bottom" id="Jupyter" order="7" weight="0.26123047" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.2361111" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.33944446" />
       <window_info anchor="right" id="PR AI Assistant" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="cn.xcc.lock.gson.toolwindow.JsonAssistantToolWindowFactory" side_tool="true" />
@@ -105,9 +106,9 @@
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Jupyter Variables" side_tool="true" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.22118056" />
-      <window_info active="true" anchor="right" id="AIAssistant" order="1" visible="true" weight="0.24201389" />
-      <window_info anchor="right" id="Database" order="2" weight="0.25" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.2170139" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.2170139" />
+      <window_info anchor="right" id="Database" order="2" weight="0.24201389" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="Plots" order="5" weight="0.1" />
@@ -186,7 +187,7 @@
       <workItem from="1753132753256" duration="12985000" />
       <workItem from="1753188536699" duration="4686000" />
       <workItem from="1753194271311" duration="51060000" />
-      <workItem from="1753947430111" duration="14654000" />
+      <workItem from="1753947430111" duration="24659000" />
     </task>
     <servers />
   </component>
