@@ -10,6 +10,8 @@
     <orderEntry type="module" module-name="latin-textreuse" />
     <orderEntry type="module" module-name="cc_sents_jsons_duplicated" />
     <orderEntry type="module" module-name="cc_rawtexts" />
+    <orderEntry type="module" module-name="enemy-christianity" />
+    <orderEntry type="module" module-name="metagreek" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

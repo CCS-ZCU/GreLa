@@ -3,9 +3,11 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../enemy-christianity" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../labyrinth" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latin-contextual-embeddings" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latin-textreuse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../metagreek" vcs="Git" />
     <mapping directory="/srv/models/MelBERT" vcs="Git" />
   </component>
 </project>

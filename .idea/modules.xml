@@ -5,9 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/GreLa.iml" filepath="$PROJECT_DIR$/.idea/GreLa.iml" />
       <module fileurl="file:///srv/data/corpus-corporum/cc_rawtexts/.idea/cc_rawtexts.iml" filepath="/srv/data/corpus-corporum/cc_rawtexts/.idea/cc_rawtexts.iml" />
       <module fileurl="file:///srv/data/corpus-corporum/cc_sents_jsons_duplicated/.idea/cc_sents_jsons_duplicated.iml" filepath="/srv/data/corpus-corporum/cc_sents_jsons_duplicated/.idea/cc_sents_jsons_duplicated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../enemy-christianity/.idea/enemy-christianity.iml" filepath="$PROJECT_DIR$/../enemy-christianity/.idea/enemy-christianity.iml" />
       <module fileurl="file://$PROJECT_DIR$/../labyrinth/.idea/labyrinth.iml" filepath="$PROJECT_DIR$/../labyrinth/.idea/labyrinth.iml" />
       <module fileurl="file://$PROJECT_DIR$/../latin-contextual-embeddings/.idea/latin-contextual-embeddings.iml" filepath="$PROJECT_DIR$/../latin-contextual-embeddings/.idea/latin-contextual-embeddings.iml" />
       <module fileurl="file://$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" filepath="$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../metagreek/.idea/metagreek.iml" filepath="$PROJECT_DIR$/../metagreek/.idea/metagreek.iml" />
       <module fileurl="file:///srv/models/.idea/models.iml" filepath="/srv/models/.idea/models.iml" />
     </modules>
   </component>
