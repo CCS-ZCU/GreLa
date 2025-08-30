@@ -8,6 +8,7 @@
     <mapping directory="$PROJECT_DIR$/../latin-contextual-embeddings" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latin-textreuse" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../metagreek" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../theos" vcs="Git" />
     <mapping directory="/srv/models/MelBERT" vcs="Git" />
   </component>
 </project>

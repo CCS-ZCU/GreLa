@@ -12,6 +12,7 @@
     <orderEntry type="module" module-name="cc_rawtexts" />
     <orderEntry type="module" module-name="enemy-christianity" />
     <orderEntry type="module" module-name="metagreek" />
+    <orderEntry type="module" module-name="theos" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

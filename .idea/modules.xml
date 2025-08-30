@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" filepath="$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" />
       <module fileurl="file://$PROJECT_DIR$/../metagreek/.idea/metagreek.iml" filepath="$PROJECT_DIR$/../metagreek/.idea/metagreek.iml" />
       <module fileurl="file:///srv/models/.idea/models.iml" filepath="/srv/models/.idea/models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../theos/.idea/theos.iml" filepath="$PROJECT_DIR$/../theos/.idea/theos.iml" />
     </modules>
   </component>
 </project>
