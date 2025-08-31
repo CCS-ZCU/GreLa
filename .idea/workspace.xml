@@ -92,7 +92,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33055556" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22611111" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
@@ -194,6 +194,7 @@
       <workItem from="1755616046930" duration="9527000" />
       <workItem from="1756335528201" duration="1209000" />
       <workItem from="1756533206280" duration="2954000" />
+      <workItem from="1756581817609" duration="14764000" />
     </task>
     <servers />
   </component>
