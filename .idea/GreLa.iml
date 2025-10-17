@@ -13,6 +13,9 @@
     <orderEntry type="module" module-name="enemy-christianity" />
     <orderEntry type="module" module-name="metagreek" />
     <orderEntry type="module" module-name="theos" />
+    <orderEntry type="module" module-name="latin-bert" />
+    <orderEntry type="module" module-name="dictionary-emlap" />
+    <orderEntry type="module" module-name="grela" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

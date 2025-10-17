@@ -36,9 +36,18 @@ In the **works** table, we are gradually adding additional metadata for individu
 
 The database is implemented using DuckDB, an open-source column-oriented Relational Database Management System (RDBMS) designed to provide high performance on complex queries against large databases.
 
-## Database Schema Documentation
+# Database Schema Documentation
 
-### Table: `sentences`
+## Table: `sentence_embeddings`
+
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | NO | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| model | VARCHAR | YES | N/A |
+| embedding | JSON | YES | N/A |
+
+## Table: `sentences`
 
 | Column Name     | Data Type    | Is Nullable | Default Value |
 |-----------------|-------------|-------------|---------------|
@@ -46,8 +55,9 @@ The database is implemented using DuckDB, an open-source column-oriented Relatio
 | grela_id | VARCHAR | YES | N/A |
 | position | INTEGER | YES | N/A |
 | text | VARCHAR | YES | N/A |
+| subwork_id | VARCHAR | YES | N/A |
 
-### Table: `tokens`
+## Table: `tokens`
 
 | Column Name     | Data Type    | Is Nullable | Default Value |
 |-----------------|-------------|-------------|---------------|
@@ -59,8 +69,9 @@ The database is implemented using DuckDB, an open-source column-oriented Relatio
 | char_start | INTEGER | YES | N/A |
 | char_end | INTEGER | YES | N/A |
 | token_id | BIGINT | YES | N/A |
+| ref | JSON | YES | N/A |
 
-### Table: `works`
+## Table: `works`
 
 | Column Name     | Data Type    | Is Nullable | Default Value |
 |-----------------|-------------|-------------|---------------|
@@ -83,7 +94,8 @@ The database is implemented using DuckDB, an open-source column-oriented Relatio
 | author_viaf | DOUBLE | YES | N/A |
 | title_viaf | DOUBLE | YES | N/A |
 | date_random | DOUBLE | YES | N/A |
-
+| token_count | BIGINT | YES | 0 |
+| textsource | VARCHAR | YES | N/A |
 
 
 ## Getting started

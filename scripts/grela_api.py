@@ -14,7 +14,7 @@ app.config["MAX_CONTENT_LENGTH"] = 1000 * 1024 * 1024  # 1000 MB
 CORS(app)
 
 # ────────────── Constants ──────────────
-DUCKDB_PATH = "/srv/data/grela/grela_v0-3.duckdb"
+DUCKDB_PATH = "/srv/data/grela/grela_v0-4.duckdb"
 PARQUET_DIR = "/srv/webserver/data/grela-api-out"
 QUERY_DIR = "/tmp/grela-queries"
 PUBLIC_URL_PREFIX = "https://ccs-lab.zcu.cz/grela-api-out"

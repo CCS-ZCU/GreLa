@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cbba2fb-f544-4fcb-ae13-5b1aaaa92091" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GreLa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GreLa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/database-building.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/database-building.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../latin-contextual-embeddings/liber-in-grela.parquet." beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../latin-contextual-embeddings/scripts/liber-naturae-analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../latin-contextual-embeddings/scripts/liber-naturae-analysis.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="0cbba2fb-f544-4fcb-ae13-5b1aaaa92091" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,24 +44,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.grela-api.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jupyter-vojta/notebooks/GreLa/scripts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.grela-api.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "last_opened_file_path": "/srv/data/grela",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -78,9 +73,9 @@
       <window_info id="Pull Requests" />
       <window_info id="Learn" />
       <window_info id="R_Remote_Host" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26145834" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6832168" visible="true" weight="0.15659723" />
       <window_info id="Commit" order="1" weight="0.25" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info active="true" id="Structure" order="2" sideWeight="0.31678322" side_tool="true" visible="true" weight="0.15659723" />
       <window_info anchor="bottom" id="R_Jobs" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -91,14 +86,14 @@
       <window_info anchor="bottom" id="Run" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22611111" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.16055556" />
+      <window_info anchor="bottom" id="Terminal" order="3" weight="0.13277778" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
       <window_info anchor="bottom" id="Jupyter" order="7" weight="0.26123047" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.2361111" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.33944446" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.16055556" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.13277778" />
       <window_info anchor="right" id="PR AI Assistant" />
       <window_info anchor="right" id="Endpoints" />
       <window_info anchor="right" id="cn.xcc.lock.gson.toolwindow.JsonAssistantToolWindowFactory" side_tool="true" />
@@ -106,21 +101,23 @@
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Jupyter Variables" side_tool="true" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.2170139" />
-      <window_info anchor="right" id="AIAssistant" order="1" weight="0.2170139" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.33020833" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.06770833" />
       <window_info anchor="right" id="Database" order="2" weight="0.24201389" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="Plots" order="5" weight="0.1" />
+      <window_info anchor="right" id="ElectroJunToolWindow" order="6" />
+      <window_info anchor="right" id="Tabnine Chat" order="7" weight="0.2621528" />
     </layout>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="/srv/data/grela" />
       <recent name="$PROJECT_DIR$/../enemy-christianity/scripts" />
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/../latin-textreuse/scripts" />
-      <recent name="$PROJECT_DIR$/../vulgate_subcorpora" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
@@ -163,8 +160,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-PY-252.25557.35" />
-        <option value="bundled-python-sdk-cfca122e0627-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.35" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-PY-252.25557.178" />
+        <option value="bundled-python-sdk-ce6832f46686-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.178" />
       </set>
     </attachedChunks>
   </component>
@@ -194,7 +191,25 @@
       <workItem from="1755616046930" duration="9527000" />
       <workItem from="1756335528201" duration="1209000" />
       <workItem from="1756533206280" duration="2954000" />
-      <workItem from="1756581817609" duration="14764000" />
+      <workItem from="1756581817609" duration="21053000" />
+      <workItem from="1756730556761" duration="25856000" />
+      <workItem from="1756994741341" duration="18274000" />
+      <workItem from="1757067636213" duration="347000" />
+      <workItem from="1758541458156" duration="870000" />
+      <workItem from="1758543271565" duration="18000" />
+      <workItem from="1758543966905" duration="162000" />
+      <workItem from="1758544136931" duration="137000" />
+      <workItem from="1758728133704" duration="18588000" />
+      <workItem from="1758816570901" duration="18309000" />
+      <workItem from="1758890076133" duration="19504000" />
+      <workItem from="1759135170753" duration="887000" />
+      <workItem from="1759141183317" duration="34963000" />
+      <workItem from="1759302289773" duration="4907000" />
+      <workItem from="1759342983400" duration="16469000" />
+      <workItem from="1760086255339" duration="26000" />
+      <workItem from="1760604327173" duration="3529000" />
+      <workItem from="1760688531566" duration="696000" />
+      <workItem from="1760695781236" duration="4959000" />
     </task>
     <servers />
   </component>
@@ -206,7 +221,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file:///srv/models/latin-bert/latin_tokenizer.py</url>
-          <line>32</line>
+          <line>58</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="/data/sources/exprecce/exprecce_metadata_v2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../labyrinth/data/combined_single-layers.csv">
           <value>
             <Attribute>
@@ -46,6 +53,13 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../labyrinth/data/labyrinthus_df_classified.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../labyrinth/data/labyrinthus_df_classified_models_sample100.csv">
           <value>
             <Attribute>
               <option name="separator" value=":" />
