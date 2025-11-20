@@ -2,18 +2,23 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../EMLAP_ETL/.idea/EMLAP_ETL.iml" filepath="$PROJECT_DIR$/../EMLAP_ETL/.idea/EMLAP_ETL.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/GreLa.iml" filepath="$PROJECT_DIR$/.idea/GreLa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LAGT/.idea/LAGT.iml" filepath="$PROJECT_DIR$/../LAGT/.idea/LAGT.iml" />
       <module fileurl="file:///srv/data/corpus-corporum/cc_rawtexts/.idea/cc_rawtexts.iml" filepath="/srv/data/corpus-corporum/cc_rawtexts/.idea/cc_rawtexts.iml" />
       <module fileurl="file:///srv/data/corpus-corporum/cc_sents_jsons_duplicated/.idea/cc_sents_jsons_duplicated.iml" filepath="/srv/data/corpus-corporum/cc_sents_jsons_duplicated/.idea/cc_sents_jsons_duplicated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../corpus-corporum/.idea/corpus-corporum.iml" filepath="$PROJECT_DIR$/../corpus-corporum/.idea/corpus-corporum.iml" />
       <module fileurl="file://$PROJECT_DIR$/../dictionary-emlap/.idea/dictionary-emlap.iml" filepath="$PROJECT_DIR$/../dictionary-emlap/.idea/dictionary-emlap.iml" />
       <module fileurl="file://$PROJECT_DIR$/../enemy-christianity/.idea/enemy-christianity.iml" filepath="$PROJECT_DIR$/../enemy-christianity/.idea/enemy-christianity.iml" />
       <module fileurl="file:///srv/data/grela/.idea/grela.iml" filepath="/srv/data/grela/.idea/grela.iml" />
       <module fileurl="file://$PROJECT_DIR$/../labyrinth/.idea/labyrinth.iml" filepath="$PROJECT_DIR$/../labyrinth/.idea/labyrinth.iml" />
       <module fileurl="file://$PROJECT_DIR$/../latin-bert/.idea/latin-bert.iml" filepath="$PROJECT_DIR$/../latin-bert/.idea/latin-bert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../latin-contextual-embeddings/.idea/latin-contextual-embeddings.iml" filepath="$PROJECT_DIR$/../latin-contextual-embeddings/.idea/latin-contextual-embeddings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../latin-preprocessing/.idea/latin-preprocessing.iml" filepath="$PROJECT_DIR$/../latin-preprocessing/.idea/latin-preprocessing.iml" />
       <module fileurl="file://$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" filepath="$PROJECT_DIR$/../latin-textreuse/.idea/latin-textreuse.iml" />
       <module fileurl="file://$PROJECT_DIR$/../metagreek/.idea/metagreek.iml" filepath="$PROJECT_DIR$/../metagreek/.idea/metagreek.iml" />
       <module fileurl="file:///srv/models/.idea/models.iml" filepath="/srv/models/.idea/models.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../noscemus_ETF/.idea/noscemus_ETF.iml" filepath="$PROJECT_DIR$/../noscemus_ETF/.idea/noscemus_ETF.iml" />
       <module fileurl="file://$PROJECT_DIR$/../theos/.idea/theos.iml" filepath="$PROJECT_DIR$/../theos/.idea/theos.iml" />
     </modules>
   </component>

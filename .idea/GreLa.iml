@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.10 virtualenv at /srv/venvs/latin_venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 virtualenv at ~/notebooks/labyrinth/venv_torch_nlp" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="labyrinth" />
     <orderEntry type="module" module-name="latin-contextual-embeddings" />
@@ -16,6 +16,11 @@
     <orderEntry type="module" module-name="latin-bert" />
     <orderEntry type="module" module-name="dictionary-emlap" />
     <orderEntry type="module" module-name="grela" />
+    <orderEntry type="module" module-name="latin-preprocessing" />
+    <orderEntry type="module" module-name="corpus-corporum" />
+    <orderEntry type="module" module-name="noscemus_ETF" />
+    <orderEntry type="module" module-name="EMLAP_ETL" />
+    <orderEntry type="module" module-name="LAGT" />
   </component>
   <component name="PackageRequirementsSettings">
     <option name="requirementsPath" value="" />

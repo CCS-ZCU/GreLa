@@ -11,7 +11,7 @@ CC-BY-SA 4.0, see attached License.md
 ---
 ## Description
 
-This repository serves for the creation, maintenance, and enrichment of the GreLa corpus
+This repository serves for the creation, maintenance, and enrichment of the GreLa corpus.
 
 GreLa is a comprehensive corpus of Greek and Latin literature from the 8 c. BCE to the 17. c. CE. It covers more than 11,000 works, 26,000,000 sentences and 380,000,000 tokens. It is formed as a merge of the following corpora:
 * [LAGT](https://zenodo.org/records/13889714): Lemmatized Ancient Greek Texts, combining all ancient Greek texts from Perseus Digital Library, First 1,000 Years of Greek, Glaux and OGA.

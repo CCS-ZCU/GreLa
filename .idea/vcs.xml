@@ -2,14 +2,19 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../EMLAP_ETL" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../LAGT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../corpus-corporum" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../dictionary-emlap" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../enemy-christianity" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../labyrinth" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latin-bert" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latin-contextual-embeddings" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../latin-preprocessing" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../latin-textreuse" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../metagreek" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../noscemus_ETF" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../theos" vcs="Git" />
     <mapping directory="/srv/models/MelBERT" vcs="Git" />
   </component>
