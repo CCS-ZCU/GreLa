@@ -34,7 +34,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../EMLAP_ETL" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../labyrinth/venv_torch_nlp/lib/python3.12/site-packages/gspread_dataframe.py" root0="SKIP_INSPECTION" />
@@ -49,25 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.grela-api.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "last_opened_file_path": "/home/jupyter-vojta/notebooks/noscemus_ETF",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.grela-api.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jupyter-vojta/notebooks/noscemus_ETF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -78,9 +79,9 @@
       <window_info id="Pull Requests" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="R_Remote_Host" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8247573" visible="true" weight="0.18255208" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8541147" visible="true" weight="0.19765624" />
       <window_info id="Commit" order="1" weight="0.25" />
-      <window_info active="true" id="Structure" order="2" sideWeight="0.17507276" side_tool="true" visible="true" weight="0.18255208" />
+      <window_info active="true" id="Structure" order="2" sideWeight="0.14480197" side_tool="true" visible="true" weight="0.19765624" />
       <window_info anchor="bottom" id="R_Jobs" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -93,9 +94,9 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.16055556" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.10541667" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.61958337" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
-      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.1" />
+      <window_info anchor="bottom" id="Python Packages" order="5" weight="0.22125" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
       <window_info anchor="bottom" id="Jupyter" order="7" weight="0.26123047" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.16055556" />
@@ -136,8 +137,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-PY-253.28086.55" />
-        <option value="bundled-python-sdk-43f194345aec-a8a68a0a8659-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.28086.55" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-PY-253.28294.166" />
+        <option value="bundled-python-sdk-aa308119b56d-b1aafe368c7f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.28294.166" />
       </set>
     </attachedChunks>
   </component>
@@ -210,7 +211,10 @@
       <workItem from="1763115337233" duration="16858000" />
       <workItem from="1763459554219" duration="3422000" />
       <workItem from="1763564476856" duration="13943000" />
-      <workItem from="1763584123217" duration="12847000" />
+      <workItem from="1763584123217" duration="22601000" />
+      <workItem from="1763718402067" duration="11710000" />
+      <workItem from="1763734761278" duration="1861000" />
+      <workItem from="1763738151511" duration="10868000" />
     </task>
     <servers />
   </component>

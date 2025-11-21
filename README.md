@@ -1,118 +1,161 @@
-#  GreLa ETL
+# GreLa ETL
 
 ---
 ## Authors
-* Vojtěch Kaše (& team of collaborators)
-
+* Vojtěch Kaše (with team of collaborators)
 
 ## License
-CC-BY-SA 4.0, see attached License.md
+CC-BY-SA 4.0 — see the attached `License.md`.
 
 ---
 ## Description
 
-This repository serves for the creation, maintenance, and enrichment of the GreLa corpus.
+This repository contains the code for creating, maintaining, and enriching the **GreLa corpus**.
 
-GreLa is a comprehensive corpus of Greek and Latin literature from the 8 c. BCE to the 17. c. CE. It covers more than 11,000 works, 26,000,000 sentences and 380,000,000 tokens. It is formed as a merge of the following corpora:
-* [LAGT](https://zenodo.org/records/13889714): Lemmatized Ancient Greek Texts, combining all ancient Greek texts from Perseus Digital Library, First 1,000 Years of Greek, Glaux and OGA.
-* [Corpus Corporum](https://mlat.uzh.ch): a comprehensive corpus of Latin literature
-* [NOSCEMUS](https://zenodo.org/records/15040256): a database of early Modern scientific literature
-* [EMLAP](https://zenodo.org/records/14765511): Early Modern Latin Alchemical Prints
+**GreLa** is a comprehensive corpus of Greek and Latin literature from the 8th c. BCE to the 17th c. CE.  
+It currently contains more than **11,000 works**, **21,000,000 sentences**, and **350,000,000 tokens**.
 
-| subcorpus   | works_N   | sentences_N   | tokens_N    |
-|:------------|:----------|:--------------|:------------|
-| cc          | 7,819     | 11,835,457    | 201,939,293 |
-| emlap       | 73        | 220,846       | 3,495,212   |
-| lagt        | 1,957     | 2,703,678     | 35,808,742  |
-| noscemus    | 996       | 11,802,783    | 139,401,899 |
-| vulgate     | 73        | 35,254        | 603,091     |
+GreLa is formed as a merge of the following corpora:
 
+* **[LAGT](https://zenodo.org/records/13889714)** — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA.
+* **[Corpus Corporum](https://mlat.uzh.ch)** — a comprehensive corpus of Latin literature.
+* **[NOSCEMUS](https://zenodo.org/records/15040256)** — a curated database of Early Modern scientific literature.
+* **[EMLAP](https://zenodo.org/records/14765511)** — Early Modern Latin Alchemical Prints.
+* **[latin-lemmatized-texts](https://github.com/lascivaroma/latin-lemmatized-texts/tree/main)** — used here as a source for the lemmatized Vulgate.
 
-GreLa is structured as a relational database currently consisting of three tables: **works**, **sentences**, and **tokens**. The tables are mapped on each other using the keys `grela_id` and `sentence_id`. `grela_id` is formed as a combination of the subcorpus akronym and the ID of the work in the respective subcorpus (`<subcorpus-akronym>_<work-id>`, e.g. `cc_1271O`). `sentence_id` extends `grela_id` by positional index of the sentence, starting from 0 (e.g. `cc_12710_0` and `cc_12710_1` stand for the first two sentences from the work with the ID 12710 in *Corpus Corporum*).
+### Corpus statistics
 
-In the **tokens** table, you can, for instance, search using the `lemma`  and `pos_tag` fields. You can also retrieve the position of the token within the respective sentence using `char_start` and `char_end`. 
+| grela_source   | works_N | sentences_N | tokens_N    |
+|:---------------|--------:|------------:|------------:|
+| lagt           | 2,160   | 2,095,265   | 38,223,149  |
+| cc             | 7,819   | 14,229,691  | 254,770,887 |
+| noscemus       |   975   | 4,637,231   | 54,542,448  |
+| emlap          |   100   |   411,638   |  6,385,345  |
+| vulgate        |    73   |    35,254   |    603,091  |
 
-In the **works** table, we are gradually adding additional metadata for individual works. Most importantly, we offer a date using the fields `not_before` and `not_after`. While for early modern works these two attributes are often the same, as the date of publication is known, for works from antiquity, we often have only a rough estimate, which can only be expressed by means of an interval. This dating convention invites a Monte Carlo approach to modeling temporal uncertainty, which we proposed in [this paper](https://ceur-ws.org/Vol-3558/paper5123.pdf).
+GreLa is implemented as a relational database with three main tables: **`works`**, **`sentences`**, and **`tokens`**.  
+The schema links tables through:
 
-The database is implemented using DuckDB, an open-source column-oriented Relational Database Management System (RDBMS) designed to provide high performance on complex queries against large databases.
+- **`grela_id`** — unique ID for each work (built as `<subcorpus>_<work-id>`, e.g., `cc_12710`)  
+- **`sentence_id`** — unique ID for each sentence (`<grela_id>_<position>`, e.g., `cc_12710_0`, `cc_12710_1`)
+
+### Querying the corpus
+
+The **tokens** table allows searching by lemma, POS, and positional information (`char_start`, `char_end`).  
+Where available, the `ref` JSON attribute encodes textual reference metadata (such as book/chapter/verse for biblical or structured texts). This varies significantly across subcorpora.
+
+The **sentences** table supports efficient search for multi-word string patterns in raw text.
+
+The **works** table contains rich metadata for each work. The fields `not_before` and `not_after` express a chronological interval. Ancient texts often require such interval dating, and GreLa supports temporal uncertainty using Monte Carlo modeling as described in [this paper](https://ceur-ws.org/Vol-3558/paper5123.pdf).  
+Following this method, each work is also assigned a **`date_random`** point estimate sampled from its interval.
+
+Additionally, the works table provides identifiers such as:
+
+- `author_viaf`
+- `author_wd` (Wikidata QID)
+- `author_gnd`
+
+as well as subcorpus-specific metadata stored uniformly in the `subcorpus_specific_metadata` JSON field.
+
+GreLa uses **DuckDB**, an efficient column-oriented analytical database engine optimized for complex queries over large datasets.
+
+---
 
 # Database Schema Documentation
 
-## Table: `sentence_embeddings`
-
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| sentence_id | VARCHAR | NO | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| model | VARCHAR | YES | N/A |
-| embedding | JSON | YES | N/A |
-
 ## Table: `sentences`
 
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| sentence_id | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| position | INTEGER | YES | N/A |
-| text | VARCHAR | YES | N/A |
-| subwork_id | VARCHAR | YES | N/A |
+| Column Name | Data Type | Nullable | Default |
+|-------------|-----------|----------|---------|
+| sentence_id | VARCHAR   | YES      | N/A     |
+| grela_id    | VARCHAR   | YES      | N/A     |
+| position    | INTEGER   | YES      | N/A     |
+| sent_text   | VARCHAR   | YES      | N/A     |
 
 ## Table: `tokens`
 
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| sentence_id | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| token_text | VARCHAR | YES | N/A |
-| lemma | VARCHAR | YES | N/A |
-| pos | VARCHAR | YES | N/A |
-| char_start | INTEGER | YES | N/A |
-| char_end | INTEGER | YES | N/A |
-| token_id | BIGINT | YES | N/A |
-| ref | JSON | YES | N/A |
+| Column Name | Data Type | Nullable | Default |
+|-------------|-----------|----------|---------|
+| sentence_id | VARCHAR   | YES      | N/A     |
+| grela_id    | VARCHAR   | YES      | N/A     |
+| token_text  | VARCHAR   | YES      | N/A     |
+| lemma       | VARCHAR   | YES      | N/A     |
+| pos         | VARCHAR   | YES      | N/A     |
+| ref         | JSON      | YES      | N/A     |
+| char_start  | INTEGER   | YES      | N/A     |
+| char_end    | INTEGER   | YES      | N/A     |
+| token_id    | BIGINT    | YES      | N/A     |
 
 ## Table: `works`
 
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| grela_source | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| author | VARCHAR | YES | N/A |
-| title | VARCHAR | YES | N/A |
-| not_before | DOUBLE | YES | N/A |
-| not_after | DOUBLE | YES | N/A |
-| lagt_tlg_epithet | VARCHAR | YES | N/A |
-| lagt_genre | VARCHAR | YES | N/A |
-| lagt_provenience | VARCHAR | YES | N/A |
-| noscemus_place | VARCHAR | YES | N/A |
-| noscemus_genre | VARCHAR | YES | N/A |
-| noscemus_discipline | VARCHAR | YES | N/A |
-| title_short | VARCHAR | YES | N/A |
-| emlap_noscemus_id | DOUBLE | YES | N/A |
-| place_publication | VARCHAR | YES | N/A |
-| place_geonames | VARCHAR | YES | N/A |
-| author_viaf | DOUBLE | YES | N/A |
-| title_viaf | DOUBLE | YES | N/A |
-| date_random | DOUBLE | YES | N/A |
-| token_count | BIGINT | YES | 0 |
-| textsource | VARCHAR | YES | N/A |
+| Column Name                  | Data Type | Nullable | Default |
+|------------------------------|-----------|----------|---------|
+| grela_source                 | VARCHAR   | YES      | N/A     |
+| grela_id                     | VARCHAR   | YES      | N/A     |
+| author                       | VARCHAR   | YES      | N/A     |
+| title                        | VARCHAR   | YES      | N/A     |
+| not_before                   | INTEGER   | YES      | N/A     |
+| not_after                    | INTEGER   | YES      | N/A     |
+| date_random                  | INTEGER   | YES      | N/A     |
+| place_publication            | VARCHAR   | YES      | N/A     |
+| place_geonames               | VARCHAR   | YES      | N/A     |
+| author_viaf                  | VARCHAR   | YES      | N/A     |
+| author_wd                    | VARCHAR   | YES      | N/A     |
+| author_gnd                   | VARCHAR   | YES      | N/A     |
+| title_viaf                   | VARCHAR   | YES      | N/A     |
+| subcorpus_specific_metadata  | JSON      | YES      | N/A     |
+| token_count                  | BIGINT    | YES      | 0       |
+| sentence_count               | BIGINT    | YES      | 0       |
 
+---
 
-## Getting started
+## Getting Started
 
-GreLa is now accessible via an API. To get started, check [this](https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb) Google Colab notebook.
+GreLa is accessible via a public web API.  
+To get started, check the introductory Colab notebook:
 
-```python
-# currently, we maintain the database on our CCS-Lab server
+👉 https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb
 
+---
 
+## Version History
 
-```
+* **0.6**
+  * input data in unified format  
+  * EMLAP extended to all 100 works  
+  * CC input derived from Lemmatized XML with `ref` metadata  
+  * `works` table enriched with VIAF, Wikidata ID, GND  
+  * subcorpus-specific attributes unified into `subcorpus_specific_metadata`
 
-## How to cite
+* **0.5**
+  * various minor improvements
 
-[once a release is created and published via zenodo, put its citation here]
+* **0.4**
+  * significantly improved Greek sentence and token segmentation  
+  * added `ref` attribute for Greek works
 
-## Ackwnowledgement
+* **0.1**
+  * first version of GreLa
 
-[This work has been supported by ...]
+---
+
+## Roadmap
+
+* `ref` attribute documentation
+* add collaborators as coauthors based on agreement
+* document licences for all source corpora
+* ore identifiers for works and authors (e.g. PHI IDs for Latin texts)  
+* provenance metadata for Latin texts  
+* standardized spatial metadata for works and authors  
+
+---
+
+## How to Cite
+
+*(After publishing a Zenodo release, place the official citation here.)*
+
+---
+
+## Acknowledgement
+
+*(Add funding and collaboration acknowledgements here.)*

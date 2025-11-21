@@ -1,0 +1,55 @@
+{
+  "title": "GreLa: A Corpus of Greek and Latin Literature (8th c. BCE – 17th c. CE)",
+  "upload_type": "dataset",
+  "description": "GreLa is a comprehensive corpus of Greek and Latin literature spanning nearly 2,500 years...",
+  "creators": [
+    {
+      "name": "Kaše, Vojtěch"
+    }
+  ],
+  "contributors": [],
+  "version": "0.6",
+  "language": "en",
+  "keywords": [
+    "corpus linguistics",
+    "latin",
+    "greek",
+    "digital humanities",
+    "nlp",
+    "classics",
+    "linguistic annotation",
+    "historical corpora",
+    "duckdb"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://zenodo.org/records/13889714",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://mlat.uzh.ch",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://zenodo.org/records/15040256",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://zenodo.org/records/14765511",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/lascivaroma/latin-lemmatized-texts",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "license": {
+    "id": "cc-by-sa-4.0"
+  },
+  "access_right": "open"
+}
