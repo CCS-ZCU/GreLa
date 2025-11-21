@@ -165,7 +165,8 @@ To get started, check the introductory Colab notebook:
 * document licences for all source corpora
 * ore identifiers for works and authors (e.g. PHI IDs for Latin texts)  
 * provenance metadata for Latin texts  
-* standardized spatial metadata for works and authors  
+* standardized spatial metadata for works and authors
+* ULTIMATE GOAL: a bilingual (greek and latin) database-wide token-level and sentence-level contextual embeddings, based on a fine-tuned BERT model allowing (1) diachronic word sense induction&disambiguation and (2) fast retrieval of similar passages, paraphrases and allusion across the two languages  
 
 ---
 
