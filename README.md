@@ -65,47 +65,66 @@ GreLa uses **DuckDB**, an efficient column-oriented analytical database engine o
 
 ## Table: `sentences`
 
-| Column Name | Data Type | Nullable | Default |
-|-------------|-----------|----------|---------|
-| sentence_id | VARCHAR   | YES      | N/A     |
-| grela_id    | VARCHAR   | YES      | N/A     |
-| position    | INTEGER   | YES      | N/A     |
-| sent_text   | VARCHAR   | YES      | N/A     |
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| position | INTEGER | YES | N/A |
+| sent_text | VARCHAR | YES | N/A |
 
 ## Table: `tokens`
 
-| Column Name | Data Type | Nullable | Default |
-|-------------|-----------|----------|---------|
-| sentence_id | VARCHAR   | YES      | N/A     |
-| grela_id    | VARCHAR   | YES      | N/A     |
-| token_text  | VARCHAR   | YES      | N/A     |
-| lemma       | VARCHAR   | YES      | N/A     |
-| pos         | VARCHAR   | YES      | N/A     |
-| ref         | JSON      | YES      | N/A     |
-| char_start  | INTEGER   | YES      | N/A     |
-| char_end    | INTEGER   | YES      | N/A     |
-| token_id    | BIGINT    | YES      | N/A     |
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| token_text | VARCHAR | YES | N/A |
+| lemma | VARCHAR | YES | N/A |
+| pos | VARCHAR | YES | N/A |
+| ref | JSON | YES | N/A |
+| char_start | INTEGER | YES | N/A |
+| char_end | INTEGER | YES | N/A |
+| token_id | BIGINT | YES | N/A |
 
 ## Table: `works`
 
-| Column Name                  | Data Type | Nullable | Default |
-|------------------------------|-----------|----------|---------|
-| grela_source                 | VARCHAR   | YES      | N/A     |
-| grela_id                     | VARCHAR   | YES      | N/A     |
-| author                       | VARCHAR   | YES      | N/A     |
-| title                        | VARCHAR   | YES      | N/A     |
-| not_before                   | INTEGER   | YES      | N/A     |
-| not_after                    | INTEGER   | YES      | N/A     |
-| date_random                  | INTEGER   | YES      | N/A     |
-| place_publication            | VARCHAR   | YES      | N/A     |
-| place_geonames               | VARCHAR   | YES      | N/A     |
-| author_viaf                  | VARCHAR   | YES      | N/A     |
-| author_wd                    | VARCHAR   | YES      | N/A     |
-| author_gnd                   | VARCHAR   | YES      | N/A     |
-| title_viaf                   | VARCHAR   | YES      | N/A     |
-| subcorpus_specific_metadata  | JSON      | YES      | N/A     |
-| token_count                  | BIGINT    | YES      | 0       |
-| sentence_count               | BIGINT    | YES      | 0       |
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| grela_source | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| author | VARCHAR | YES | N/A |
+| title | VARCHAR | YES | N/A |
+| not_before | INTEGER | YES | N/A |
+| not_after | INTEGER | YES | N/A |
+| date_random | INTEGER | YES | N/A |
+| provenience | VARCHAR | YES | N/A |
+| place_publication | VARCHAR | YES | N/A |
+| place_geonames | VARCHAR | YES | N/A |
+| author_viaf | VARCHAR | YES | N/A |
+| author_wd | VARCHAR | YES | N/A |
+| author_gnd | VARCHAR | YES | N/A |
+| title_viaf | VARCHAR | YES | N/A |
+| subcorpus_specific_metadata | JSON | YES | N/A |
+
+## Table: `works_df`
+
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| grela_source | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| author | VARCHAR | YES | N/A |
+| title | VARCHAR | YES | N/A |
+| not_before | DOUBLE | YES | N/A |
+| not_after | DOUBLE | YES | N/A |
+| date_random | DOUBLE | YES | N/A |
+| provenience | VARCHAR | YES | N/A |
+| place_publication | VARCHAR | YES | N/A |
+| place_geonames | VARCHAR | YES | N/A |
+| author_viaf | VARCHAR | YES | N/A |
+| author_wd | VARCHAR | YES | N/A |
+| author_gnd | VARCHAR | YES | N/A |
+| title_viaf | DOUBLE | YES | N/A |
+| subcorpus_specific_metadata | STRUCT(lagt_tlg_epithet VARCHAR, lagt_genre VARCHAR, noscemus_place VARCHAR, noscemus_genre VARCHAR, noscemus_discipline VARCHAR, emlap_noscemus_id DOUBLE) | YES | N/A |
 
 ---
 
