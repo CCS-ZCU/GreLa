@@ -17,21 +17,22 @@ It currently contains more than **11,000 works**, **21,000,000 sentences**, and 
 
 GreLa is formed as a merge of the following corpora:
 
-* **[LAGT](https://zenodo.org/records/13889714)** — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA.
-* **[Corpus Corporum](https://mlat.uzh.ch)** — a comprehensive corpus of Latin literature.
-* **[NOSCEMUS](https://zenodo.org/records/15040256)** — a curated database of Early Modern scientific literature.
-* **[EMLAP](https://zenodo.org/records/14765511)** — Early Modern Latin Alchemical Prints.
+* **LAGT** — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA (v5.2; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17865189.svg)](https://doi.org/10.5281/zenodo.17865189).
+* **[Corpus Corporum](https://mlat.uzh.ch)** — a comprehensive corpus of Latin literature. 
+* **NOSCEMUS** — a curated database of Early Modern scientific literature (v1; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15040256.svg)](https://doi.org/10.5281/zenodo.15040256)).
+* **EMLAP** — Early Modern Latin Alchemical Prints (v0.7; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17834734.svg)](https://doi.org/10.5281/zenodo.17834734)).
 * **[latin-lemmatized-texts](https://github.com/lascivaroma/latin-lemmatized-texts/tree/main)** — used here as a source for the lemmatized Vulgate.
 
 ### Corpus statistics
 
-| grela_source   | works_N | sentences_N | tokens_N    |
-|:---------------|--------:|------------:|------------:|
-| lagt           | 2,160   | 2,095,265   | 38,223,149  |
-| cc             | 7,819   | 14,229,691  | 254,770,887 |
-| noscemus       |   975   | 4,637,231   | 54,542,448  |
-| emlap          |   100   |   411,638   |  6,385,345  |
-| vulgate        |    73   |    35,254   |    603,091  |
+| grela_source   | works_N   | sentences_N   | tokens_N    |
+|:---------------|:----------|:--------------|:------------|
+| lagt           | 2,160     | 2,095,265     | 38,223,149  |
+| cc             | 7,819     | 14,229,691    | 254,770,887 |
+| noscemus       | 975       | 4,637,231     | 54,542,448  |
+| emlap          | 100       | 444,211       | 6,477,016   |
+| vulgate        | 73        | 35,254        | 603,091     |
+
 
 GreLa is implemented as a relational database with three main tables: **`works`**, **`sentences`**, and **`tokens`**.  
 The schema links tables through:
@@ -134,6 +135,30 @@ GreLa is accessible via a public web API.
 To get started, check the introductory Colab notebook:
 
 👉 https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb
+
+
+## License
+
+The **GreLa code, schema and derived metadata** are released under  
+**CC BY-SA 4.0** (see `LICENSE.md`).
+
+The underlying texts and some annotations inherit the licences of the
+source corpora:
+
+- **LAGT** (Perseus, First 1K Greek, GLAUx, OGA): CC BY-SA 4.0  
+- **Corpus Corporum**: mix of CC BY-SA 4.0 and public-domain texts  
+- **NOSCEMUS**: CC BY 4.0  
+- **EMLAP**: CC BY-SA 4.0  
+- **latin-lemmatized-texts** (Vulgate): public-domain text, CC BY-SA 4.0
+  annotations
+
+When reusing **GreLa data**, please:
+
+1. Cite **GreLa** and the relevant source corpus (LAGT, Corpus Corporum,
+   NOSCEMUS, EMLAP, latin-lemmatized-texts, …).
+2. Follow both the **GreLa CC BY-SA 4.0** licence and the licence(s) of
+   the original corpus for the texts you use.
+
 
 ---
 

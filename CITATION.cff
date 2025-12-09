@@ -1,18 +1,30 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-references:
-  - type: "software"
-authors: 
-  affiliation: ""
-      family-names: ""
-      given-names: ""
-      orcid: ""-
-license: cc-by-nc-4.0
-repository-code: ""
-title: ""
-version:
-doi: 
-date-released: 2023-04-27
-abstract: ""
+message: "If you use this corpus, please cite it as below."
+type: dataset
+
+title: "GreLa"
+version: "0.6"
+date-released: 2025-12-05
+
+authors:
+  - family-names: "Kaše"
+    given-names: "Vojtěch"
+    affiliation: "University of West Bohemia"
+    orcid: "0000-0002-6601-1605"
+
+
+license: CC-BY-SA-4.0
+repository-code: "https://github.com/CCS-ZCU/GreLa"
+
+abstract: "GreLa is a comprehensive corpus of Greek and Latin literature from the 8th c. BCE to the 17th c. CE, implemented as a DuckDB database with sentence- and token-level annotation and rich metadata, aggregating texts from LAGT, Corpus Corporum, NOSCEMUS, EMLAP, and latin-lemmatized-texts."
+
 keywords:
-  - ""
+  - "corpus linguistics"
+  - "latin"
+  - "greek"
+  - "digital humanities"
+  - "nlp"
+  - "classics"
+  - "linguistic annotation"
+  - "historical corpora"
+  - "duckdb"

@@ -58,7 +58,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jupyter-vojta/notebooks/noscemus_ETF&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jupyter-vojta/notebooks/LAGT&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -76,12 +76,12 @@
       <window_info id="AI Playground" side_tool="true" />
       <window_info id="Backup and Sync History" />
       <window_info id="Commit_Guest" show_stripe_button="false" />
-      <window_info id="Pull Requests" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="R_Remote_Host" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8545977" visible="true" weight="0.19765624" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8606419" visible="true" weight="0.21215278" />
       <window_info id="Commit" order="1" weight="0.25" />
-      <window_info active="true" id="Structure" order="2" sideWeight="0.1454023" side_tool="true" visible="true" weight="0.19765624" />
+      <window_info id="Structure" order="2" sideWeight="0.4991554" side_tool="true" weight="0.15104166" />
+      <window_info id="Pull Requests" order="3" sideWeight="0.5008446" weight="0.15104166" />
       <window_info anchor="bottom" id="R_Jobs" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="TypeScript" />
@@ -94,7 +94,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.16055556" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22875" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22782503" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.22125" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
@@ -120,11 +120,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../LAGT" />
       <recent name="$PROJECT_DIR$/../LAGT/scripts" />
       <recent name="$PROJECT_DIR$/../corpus-corporum/scripts" />
       <recent name="$PROJECT_DIR$/../dictionary-emlap/data/large_files" />
       <recent name="$PROJECT_DIR$/../dictionary-emlap/scripts" />
-      <recent name="$PROJECT_DIR$/../labyrinth/figures/pub" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../corpus-corporum/data/lemmatized-xmls" />
@@ -137,8 +137,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-PY-253.28294.166" />
-        <option value="bundled-python-sdk-aa308119b56d-b1aafe368c7f-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.28294.166" />
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-PY-253.28294.336" />
+        <option value="bundled-python-sdk-0978a7220b69-9867c7d4c0a4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.28294.336" />
       </set>
     </attachedChunks>
   </component>
@@ -214,7 +214,15 @@
       <workItem from="1763584123217" duration="22601000" />
       <workItem from="1763718402067" duration="11710000" />
       <workItem from="1763734761278" duration="1861000" />
-      <workItem from="1763738151511" duration="14676000" />
+      <workItem from="1763738151511" duration="15953000" />
+      <workItem from="1764938753730" duration="19000" />
+      <workItem from="1764938822244" duration="200000" />
+      <workItem from="1764939041986" duration="34000" />
+      <workItem from="1764968337278" duration="9537000" />
+      <workItem from="1765215323018" duration="4407000" />
+      <workItem from="1765274688098" duration="3430000" />
+      <workItem from="1765278228918" duration="149000" />
+      <workItem from="1765278388287" duration="564000" />
     </task>
     <servers />
   </component>
