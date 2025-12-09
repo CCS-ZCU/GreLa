@@ -1,7 +1,7 @@
 {
   "title": "GreLa",
   "upload_type": "dataset",
-  "description": "GreLa is a comprehensive corpus of Greek and Latin literature spanning nearly 2,500 years...",
+  "description": "GreLa is a comprehensive corpus of Greek and Latin literature spanning nearly 2,500 years.",
   "creators": [
     {
       "name": "Kaše, Vojtěch"
@@ -20,33 +20,6 @@
     "linguistic annotation",
     "historical corpora",
     "duckdb"
-  ],
-  "related_identifiers": [
-    {
-      "identifier": "https://zenodo.org/records/13889714",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://mlat.uzh.ch",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://zenodo.org/records/15040256",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://zenodo.org/records/14765511",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
-    {
-      "identifier": "https://github.com/lascivaroma/latin-lemmatized-texts",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    }
   ],
   "license": {
     "id": "cc-by-sa-4.0"

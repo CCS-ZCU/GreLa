@@ -136,7 +136,6 @@ To get started, check the introductory Colab notebook:
 
 👉 https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb
 
-
 ## License
 
 The **GreLa code, schema and derived metadata** are released under  
