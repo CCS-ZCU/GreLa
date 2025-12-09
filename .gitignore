@@ -1,2 +1,4 @@
 /data/large_files/
 /venv/
+*duckdb.part*
+

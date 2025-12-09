@@ -17,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -94,7 +94,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.16055556" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22782503" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.2326853" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.22125" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
@@ -222,7 +222,8 @@
       <workItem from="1765215323018" duration="4407000" />
       <workItem from="1765274688098" duration="3430000" />
       <workItem from="1765278228918" duration="149000" />
-      <workItem from="1765278388287" duration="1399000" />
+      <workItem from="1765278388287" duration="17090000" />
+      <workItem from="1765320130426" duration="518000" />
     </task>
     <servers />
   </component>

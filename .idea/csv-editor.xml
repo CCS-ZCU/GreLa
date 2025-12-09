@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="$PROJECT_DIR$/../EMLAP_ETL/data/positions_sample.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../LAGT/data/gr_metadata_merged.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../corpus-corporum/data/cc_metadata.csv">
           <value>
             <Attribute>

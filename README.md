@@ -1,13 +1,19 @@
-# GreLa ETL
+[![DOI](https://zenodo.org/badge/997341702.svg)](https://doi.org/10.5281/zenodo.17866142)
+
+# GreLa
 
 ---
+
 ## Authors
-* Vojtěch Kaše (with team of collaborators)
+
+* Vojtěch Kaše (with a team of collaborators)
 
 ## License
-CC-BY-SA 4.0 — see the attached `License.md`.
+
+CC-BY-SA 4.0 — see the attached `LICENSE.md`.
 
 ---
+
 ## Description
 
 This repository contains the code for creating, maintaining, and enriching the **GreLa corpus**.
@@ -15,10 +21,10 @@ This repository contains the code for creating, maintaining, and enriching the *
 **GreLa** is a comprehensive corpus of Greek and Latin literature from the 8th c. BCE to the 17th c. CE.  
 It currently contains more than **11,000 works**, **21,000,000 sentences**, and **350,000,000 tokens**.
 
-GreLa is formed as a merge of the following corpora:
+GreLa is constructed as a merge of the following corpora:
 
-* **LAGT** — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA (v5.2; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17865189.svg)](https://doi.org/10.5281/zenodo.17865189).
-* **[Corpus Corporum](https://mlat.uzh.ch)** — a comprehensive corpus of Latin literature. 
+* **LAGT** — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA (v5.2; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17865189.svg)](https://doi.org/10.5281/zenodo.17865189)).
+* **[Corpus Corporum](https://mlat.uzh.ch)** — a comprehensive corpus of Latin literature.
 * **NOSCEMUS** — a curated database of Early Modern scientific literature (v1; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15040256.svg)](https://doi.org/10.5281/zenodo.15040256)).
 * **EMLAP** — Early Modern Latin Alchemical Prints (v0.7; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17834734.svg)](https://doi.org/10.5281/zenodo.17834734)).
 * **[latin-lemmatized-texts](https://github.com/lascivaroma/latin-lemmatized-texts/tree/main)** — used here as a source for the lemmatized Vulgate.
@@ -33,7 +39,6 @@ GreLa is formed as a merge of the following corpora:
 | emlap          | 100       | 444,211       | 6,477,016   |
 | vulgate        | 73        | 35,254        | 603,091     |
 
-
 GreLa is implemented as a relational database with three main tables: **`works`**, **`sentences`**, and **`tokens`**.  
 The schema links tables through:
 
@@ -42,15 +47,15 @@ The schema links tables through:
 
 ### Querying the corpus
 
-The **tokens** table allows searching by lemma, POS, and positional information (`char_start`, `char_end`).  
-Where available, the `ref` JSON attribute encodes textual reference metadata (such as book/chapter/verse for biblical or structured texts). This varies significantly across subcorpora.
+The **`tokens`** table allows searching by lemma, POS, and positional information (`char_start`, `char_end`).  
+Where available, the `ref` JSON attribute encodes textual reference metadata (such as book/chapter/verse for biblical or otherwise structured texts). This varies significantly across subcorpora.
 
-The **sentences** table supports efficient search for multi-word string patterns in raw text.
+The **`sentences`** table supports efficient search for multi-word string patterns in raw text.
 
-The **works** table contains rich metadata for each work. The fields `not_before` and `not_after` express a chronological interval. Ancient texts often require such interval dating, and GreLa supports temporal uncertainty using Monte Carlo modeling as described in [this paper](https://ceur-ws.org/Vol-3558/paper5123.pdf).  
+The **`works`** table contains rich metadata for each work. The fields `not_before` and `not_after` express a chronological interval. Ancient texts often require such interval dating, and GreLa supports temporal uncertainty using Monte Carlo modeling as described in [this paper](https://ceur-ws.org/Vol-3558/paper5123.pdf).  
 Following this method, each work is also assigned a **`date_random`** point estimate sampled from its interval.
 
-Additionally, the works table provides identifiers such as:
+Additionally, the `works` table provides identifiers such as:
 
 - `author_viaf`
 - `author_wd` (Wikidata QID)
@@ -67,78 +72,65 @@ GreLa uses **DuckDB**, an efficient column-oriented analytical database engine o
 ## Table: `sentences`
 
 | Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| sentence_id | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| position | INTEGER | YES | N/A |
-| sent_text | VARCHAR | YES | N/A |
+|-----------------|--------------|-------------|---------------|
+| sentence_id     | VARCHAR      | YES         | N/A           |
+| grela_id        | VARCHAR      | YES         | N/A           |
+| position        | INTEGER      | YES         | N/A           |
+| sent_text       | VARCHAR      | YES         | N/A           |
 
 ## Table: `tokens`
 
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| sentence_id | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| token_text | VARCHAR | YES | N/A |
-| lemma | VARCHAR | YES | N/A |
-| pos | VARCHAR | YES | N/A |
-| ref | JSON | YES | N/A |
-| char_start | INTEGER | YES | N/A |
-| char_end | INTEGER | YES | N/A |
-| token_id | BIGINT | YES | N/A |
+| Column Name | Data Type | Is Nullable | Default Value |
+|------------|-----------|-------------|---------------|
+| sentence_id | VARCHAR  | YES         | N/A           |
+| grela_id    | VARCHAR  | YES         | N/A           |
+| token_text  | VARCHAR  | YES         | N/A           |
+| lemma       | VARCHAR  | YES         | N/A           |
+| pos         | VARCHAR  | YES         | N/A           |
+| ref         | JSON     | YES         | N/A           |
+| char_start  | INTEGER  | YES         | N/A           |
+| char_end    | INTEGER  | YES         | N/A           |
+| token_id    | BIGINT   | YES         | N/A           |
 
 ## Table: `works`
 
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| grela_source | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| author | VARCHAR | YES | N/A |
-| title | VARCHAR | YES | N/A |
-| not_before | INTEGER | YES | N/A |
-| not_after | INTEGER | YES | N/A |
-| date_random | INTEGER | YES | N/A |
-| provenience | VARCHAR | YES | N/A |
-| place_publication | VARCHAR | YES | N/A |
-| place_geonames | VARCHAR | YES | N/A |
-| author_viaf | VARCHAR | YES | N/A |
-| author_wd | VARCHAR | YES | N/A |
-| author_gnd | VARCHAR | YES | N/A |
-| title_viaf | VARCHAR | YES | N/A |
-| subcorpus_specific_metadata | JSON | YES | N/A |
-
-## Table: `works_df`
-
-| Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|-------------|-------------|---------------|
-| grela_source | VARCHAR | YES | N/A |
-| grela_id | VARCHAR | YES | N/A |
-| author | VARCHAR | YES | N/A |
-| title | VARCHAR | YES | N/A |
-| not_before | DOUBLE | YES | N/A |
-| not_after | DOUBLE | YES | N/A |
-| date_random | DOUBLE | YES | N/A |
-| provenience | VARCHAR | YES | N/A |
-| place_publication | VARCHAR | YES | N/A |
-| place_geonames | VARCHAR | YES | N/A |
-| author_viaf | VARCHAR | YES | N/A |
-| author_wd | VARCHAR | YES | N/A |
-| author_gnd | VARCHAR | YES | N/A |
-| title_viaf | DOUBLE | YES | N/A |
-| subcorpus_specific_metadata | STRUCT(lagt_tlg_epithet VARCHAR, lagt_genre VARCHAR, noscemus_place VARCHAR, noscemus_genre VARCHAR, noscemus_discipline VARCHAR, emlap_noscemus_id DOUBLE) | YES | N/A |
+| Column Name                | Data Type | Is Nullable | Default Value |
+|---------------------------|-----------|-------------|---------------|
+| grela_source              | VARCHAR   | YES         | N/A           |
+| grela_id                  | VARCHAR   | YES         | N/A           |
+| author                    | VARCHAR   | YES         | N/A           |
+| title                     | VARCHAR   | YES         | N/A           |
+| not_before                | INTEGER   | YES         | N/A           |
+| not_after                 | INTEGER   | YES         | N/A           |
+| date_random               | INTEGER   | YES         | N/A           |
+| provenience               | VARCHAR   | YES         | N/A           |
+| place_publication         | VARCHAR   | YES         | N/A           |
+| place_geonames            | VARCHAR   | YES         | N/A           |
+| author_viaf               | VARCHAR   | YES         | N/A           |
+| author_wd                 | VARCHAR   | YES         | N/A           |
+| author_gnd                | VARCHAR   | YES         | N/A           |
+| title_viaf                | VARCHAR   | YES         | N/A           |
+| subcorpus_specific_metadata | JSON    | YES         | N/A           |
 
 ---
 
 ## Getting Started
 
 GreLa is accessible via a public web API.  
-To get started, check the introductory Colab notebook:
+To get started, see the introductory Colab notebook:
 
-👉 https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb
+👉 [GreLa API – getting started](https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb)
+
+If you want to run the database locally:
+(1) download all parts of the main database file (`grela_v{version number}.duckdb.part{part number}`)
+(2) merge them back into one database file using `scripts/merge_db_parts.py`
+(3) follow standard DuckDB instructions to establish a connection with the database
+
+---
 
 ## License
 
-The **GreLa code, schema and derived metadata** are released under  
+The **GreLa code, schema, and derived metadata** are released under  
 **CC BY-SA 4.0** (see `LICENSE.md`).
 
 The underlying texts and some annotations inherit the licences of the
@@ -158,45 +150,44 @@ When reusing **GreLa data**, please:
 2. Follow both the **GreLa CC BY-SA 4.0** licence and the licence(s) of
    the original corpus for the texts you use.
 
-
 ---
 
 ## Version History
 
 * **0.6**
-  * input data in unified format  
-  * EMLAP extended to all 100 works  
-  * CC input derived from Lemmatized XML with `ref` metadata  
-  * `works` table enriched with VIAF, Wikidata ID, GND  
-  * subcorpus-specific attributes unified into `subcorpus_specific_metadata`
+    * input data in unified format  
+    * EMLAP extended to all 100 works  
+    * CC input derived from lemmatized XML with `ref` metadata  
+    * `works` table enriched with VIAF, Wikidata ID, GND  
+    * subcorpus-specific attributes unified into `subcorpus_specific_metadata`
 
 * **0.5**
-  * various minor improvements
+    * various minor improvements
 
 * **0.4**
-  * significantly improved Greek sentence and token segmentation  
-  * added `ref` attribute for Greek works
+    * significantly improved Greek sentence and token segmentation  
+    * added `ref` attribute for Greek works
 
 * **0.1**
-  * first version of GreLa
+    * first version of GreLa
 
 ---
 
 ## Roadmap
 
-* `ref` attribute documentation
-* add collaborators as coauthors based on agreement
-* document licences for all source corpora
-* ore identifiers for works and authors (e.g. PHI IDs for Latin texts)  
+* `ref` attribute documentation  
+* add collaborators as coauthors based on agreement  
+* document licences for all source corpora  
+* more identifiers for works and authors (e.g., PHI IDs for Latin texts)  
 * provenance metadata for Latin texts  
-* standardized spatial metadata for works and authors
-* ULTIMATE GOAL: a bilingual (greek and latin) database-wide token-level and sentence-level contextual embeddings, based on a fine-tuned BERT model allowing (1) diachronic word sense induction&disambiguation and (2) fast retrieval of similar passages, paraphrases and allusion across the two languages  
+* standardized spatial metadata for works and authors  
+* ULTIMATE GOAL: a bilingual (Greek and Latin) database-wide token-level and sentence-level contextual embeddings, based on a fine-tuned BERT model allowing (1) diachronic word sense induction & disambiguation and (2) fast retrieval of similar passages, paraphrases, and allusions across the two languages  
 
 ---
 
 ## How to Cite
 
-*(After publishing a Zenodo release, place the official citation here.)*
+*(After publishing a Zenodo release, add the official citation here.)*
 
 ---
 

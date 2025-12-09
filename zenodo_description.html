@@ -1,0 +1,370 @@
+<p><a href="https://doi.org/10.5281/zenodo.17866142">DOI: 10.5281/zenodo.17866142</a></p>
+<h1>GreLa</h1>
+<hr />
+<h2>Authors</h2>
+<ul>
+<li>Vojtěch Kaše (with a team of collaborators)</li>
+</ul>
+<h2>License</h2>
+<p>CC-BY-SA 4.0 — see the attached <code>LICENSE.md</code>.</p>
+<hr />
+<h2>Description</h2>
+<p>This repository contains the code for creating, maintaining, and enriching the <strong>GreLa corpus</strong>.</p>
+<p><strong>GreLa</strong> is a comprehensive corpus of Greek and Latin literature from the 8th c. BCE to the 17th c. CE.<br />
+It currently contains more than <strong>11,000 works</strong>, <strong>21,000,000 sentences</strong>, and <strong>350,000,000 tokens</strong>.</p>
+<p>GreLa is constructed as a merge of the following corpora:</p>
+<ul>
+<li><strong>LAGT</strong> — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA (v5.2; <a href="https://doi.org/10.5281/zenodo.17865189">DOI: 10.5281/zenodo.17865189</a>).</li>
+<li><strong><a href="https://mlat.uzh.ch">Corpus Corporum</a></strong> — a comprehensive corpus of Latin literature.</li>
+<li><strong>NOSCEMUS</strong> — a curated database of Early Modern scientific literature (v1; <a href="https://doi.org/10.5281/zenodo.15040256">DOI: 10.5281/zenodo.15040256</a>).</li>
+<li><strong>EMLAP</strong> — Early Modern Latin Alchemical Prints (v0.7; <a href="https://doi.org/10.5281/zenodo.17834734">DOI: 10.5281/zenodo.17834734</a>).</li>
+<li><strong><a href="https://github.com/lascivaroma/latin-lemmatized-texts/tree/main">latin-lemmatized-texts</a></strong> — used here as a source for the lemmatized Vulgate.</li>
+</ul>
+<h3>Corpus statistics</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">grela_source</th>
+<th style="text-align: left;">works_N</th>
+<th style="text-align: left;">sentences_N</th>
+<th style="text-align: left;">tokens_N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">lagt</td>
+<td style="text-align: left;">2,160</td>
+<td style="text-align: left;">2,095,265</td>
+<td style="text-align: left;">38,223,149</td>
+</tr>
+<tr>
+<td style="text-align: left;">cc</td>
+<td style="text-align: left;">7,819</td>
+<td style="text-align: left;">14,229,691</td>
+<td style="text-align: left;">254,770,887</td>
+</tr>
+<tr>
+<td style="text-align: left;">noscemus</td>
+<td style="text-align: left;">975</td>
+<td style="text-align: left;">4,637,231</td>
+<td style="text-align: left;">54,542,448</td>
+</tr>
+<tr>
+<td style="text-align: left;">emlap</td>
+<td style="text-align: left;">100</td>
+<td style="text-align: left;">444,211</td>
+<td style="text-align: left;">6,477,016</td>
+</tr>
+<tr>
+<td style="text-align: left;">vulgate</td>
+<td style="text-align: left;">73</td>
+<td style="text-align: left;">35,254</td>
+<td style="text-align: left;">603,091</td>
+</tr>
+</tbody>
+</table>
+<p>GreLa is implemented as a relational database with three main tables: <strong><code>works</code></strong>, <strong><code>sentences</code></strong>, and <strong><code>tokens</code></strong>.<br />
+The schema links tables through:</p>
+<ul>
+<li><strong><code>grela_id</code></strong> — unique ID for each work (built as <code>&lt;subcorpus&gt;_&lt;work-id&gt;</code>, e.g., <code>cc_12710</code>)  </li>
+<li><strong><code>sentence_id</code></strong> — unique ID for each sentence (<code>&lt;grela_id&gt;_&lt;position&gt;</code>, e.g., <code>cc_12710_0</code>, <code>cc_12710_1</code>)</li>
+</ul>
+<h3>Querying the corpus</h3>
+<p>The <strong><code>tokens</code></strong> table allows searching by lemma, POS, and positional information (<code>char_start</code>, <code>char_end</code>).<br />
+Where available, the <code>ref</code> JSON attribute encodes textual reference metadata (such as book/chapter/verse for biblical or otherwise structured texts). This varies significantly across subcorpora.</p>
+<p>The <strong><code>sentences</code></strong> table supports efficient search for multi-word string patterns in raw text.</p>
+<p>The <strong><code>works</code></strong> table contains rich metadata for each work. The fields <code>not_before</code> and <code>not_after</code> express a chronological interval. Ancient texts often require such interval dating, and GreLa supports temporal uncertainty using Monte Carlo modeling as described in <a href="https://ceur-ws.org/Vol-3558/paper5123.pdf">this paper</a>.<br />
+Following this method, each work is also assigned a <strong><code>date_random</code></strong> point estimate sampled from its interval.</p>
+<p>Additionally, the <code>works</code> table provides identifiers such as:</p>
+<ul>
+<li><code>author_viaf</code></li>
+<li><code>author_wd</code> (Wikidata QID)</li>
+<li><code>author_gnd</code></li>
+</ul>
+<p>as well as subcorpus-specific metadata stored uniformly in the <code>subcorpus_specific_metadata</code> JSON field.</p>
+<p>GreLa uses <strong>DuckDB</strong>, an efficient column-oriented analytical database engine optimized for complex queries over large datasets.</p>
+<hr />
+<h1>Database Schema Documentation</h1>
+<h2>Table: <code>sentences</code></h2>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+<th>Is Nullable</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sentence_id</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>grela_id</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>position</td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>sent_text</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2>Table: <code>tokens</code></h2>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+<th>Is Nullable</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sentence_id</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>grela_id</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>token_text</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>lemma</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>ref</td>
+<td>JSON</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>char_start</td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>char_end</td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>token_id</td>
+<td>BIGINT</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2>Table: <code>works</code></h2>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+<th>Is Nullable</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>grela_source</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>grela_id</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>author</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>title</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>not_before</td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>not_after</td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>date_random</td>
+<td>INTEGER</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>provenience</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>place_publication</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>place_geonames</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>author_viaf</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>author_wd</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>author_gnd</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>title_viaf</td>
+<td>VARCHAR</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>subcorpus_specific_metadata</td>
+<td>JSON</td>
+<td>YES</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Getting Started</h2>
+<p>GreLa is accessible via a public web API.<br />
+To get started, see the introductory Colab notebook:</p>
+<p>👉 <a href="https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb">GreLa API – getting started</a></p>
+<hr />
+<h2>License</h2>
+<p>The <strong>GreLa code, schema, and derived metadata</strong> are released under<br />
+<strong>CC BY-SA 4.0</strong> (see <code>LICENSE.md</code>).</p>
+<p>The underlying texts and some annotations inherit the licences of the
+source corpora:</p>
+<ul>
+<li><strong>LAGT</strong> (Perseus, First 1K Greek, GLAUx, OGA): CC BY-SA 4.0  </li>
+<li><strong>Corpus Corporum</strong>: mix of CC BY-SA 4.0 and public-domain texts  </li>
+<li><strong>NOSCEMUS</strong>: CC BY 4.0  </li>
+<li><strong>EMLAP</strong>: CC BY-SA 4.0  </li>
+<li><strong>latin-lemmatized-texts</strong> (Vulgate): public-domain text, CC BY-SA 4.0
+  annotations</li>
+</ul>
+<p>When reusing <strong>GreLa data</strong>, please:</p>
+<ol>
+<li>Cite <strong>GreLa</strong> and the relevant source corpus (LAGT, Corpus Corporum,
+   NOSCEMUS, EMLAP, latin-lemmatized-texts, …).</li>
+<li>Follow both the <strong>GreLa CC BY-SA 4.0</strong> licence and the licence(s) of
+   the original corpus for the texts you use.</li>
+</ol>
+<hr />
+<h2>Version History</h2>
+<ul>
+<li>
+<p><strong>0.6</strong></p>
+<ul>
+<li>input data in unified format  </li>
+<li>EMLAP extended to all 100 works  </li>
+<li>CC input derived from lemmatized XML with <code>ref</code> metadata  </li>
+<li><code>works</code> table enriched with VIAF, Wikidata ID, GND  </li>
+<li>subcorpus-specific attributes unified into <code>subcorpus_specific_metadata</code></li>
+</ul>
+</li>
+<li>
+<p><strong>0.5</strong></p>
+<ul>
+<li>various minor improvements</li>
+</ul>
+</li>
+<li>
+<p><strong>0.4</strong></p>
+<ul>
+<li>significantly improved Greek sentence and token segmentation  </li>
+<li>added <code>ref</code> attribute for Greek works</li>
+</ul>
+</li>
+<li>
+<p><strong>0.1</strong></p>
+<ul>
+<li>first version of GreLa</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Roadmap</h2>
+<ul>
+<li><code>ref</code> attribute documentation  </li>
+<li>add collaborators as coauthors based on agreement  </li>
+<li>document licences for all source corpora  </li>
+<li>more identifiers for works and authors (e.g., PHI IDs for Latin texts)  </li>
+<li>provenance metadata for Latin texts  </li>
+<li>standardized spatial metadata for works and authors  </li>
+<li>ULTIMATE GOAL: a bilingual (Greek and Latin) database-wide token-level and sentence-level contextual embeddings, based on a fine-tuned BERT model allowing (1) diachronic word sense induction &amp; disambiguation and (2) fast retrieval of similar passages, paraphrases, and allusions across the two languages  </li>
+</ul>
+<hr />
+<h2>How to Cite</h2>
+<p><em>(After publishing a Zenodo release, add the official citation here.)</em></p>
+<hr />
+<h2>Acknowledgement</h2>
+<p><em>(Add funding and collaboration acknowledgements here.)</em></p>
