@@ -11,7 +11,7 @@
 <h2>Description</h2>
 <p>This repository contains the code for creating, maintaining, and enriching the <strong>GreLa corpus</strong>.</p>
 <p><strong>GreLa</strong> is a comprehensive corpus of Greek and Latin literature from the 8th c. BCE to the 17th c. CE.<br />
-It currently contains more than <strong>11,000 works</strong>, <strong>21,000,000 sentences</strong>, and <strong>350,000,000 tokens</strong>.</p>
+It currently (v0.7) cover <strong>11,127 works</strong>, <strong>28,458,277 sentences</strong>, and <strong>437,399,526 tokens</strong>.</p>
 <p>GreLa is constructed as a merge of the following corpora:</p>
 <ul>
 <li><strong>LAGT</strong> — Lemmatized Ancient Greek Texts, combining ancient Greek texts from the Perseus Digital Library, First 1,000 Years of Greek, Glaux, and OGA (v5.2; <a href="https://doi.org/10.5281/zenodo.17865189">DOI: 10.5281/zenodo.17865189</a>).</li>
@@ -46,8 +46,8 @@ It currently contains more than <strong>11,000 works</strong>, <strong>21,000,00
 <tr>
 <td style="text-align: left;">noscemus</td>
 <td style="text-align: left;">975</td>
-<td style="text-align: left;">4,637,231</td>
-<td style="text-align: left;">54,542,448</td>
+<td style="text-align: left;">11,653,856</td>
+<td style="text-align: left;">137,325,383</td>
 </tr>
 <tr>
 <td style="text-align: left;">emlap</td>
@@ -290,13 +290,34 @@ Following this method, each work is also assigned a <strong><code>date_random</c
 <td>YES</td>
 <td>N/A</td>
 </tr>
+<tr>
+<td>token_count</td>
+<td>BIGINT</td>
+<td>YES</td>
+<td>0</td>
+</tr>
+<tr>
+<td>sentence_count</td>
+<td>BIGINT</td>
+<td>YES</td>
+<td>0</td>
+</tr>
+<tr>
+<td>---</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<hr />
 <h2>Getting Started</h2>
 <p>GreLa is accessible via a public web API.<br />
 To get started, see the introductory Colab notebook:</p>
 <p>👉 <a href="https://colab.research.google.com/github/CCS-ZCU/GreLa/blob/master/scripts/GreLa-API_getting-started.ipynb">GreLa API – getting started</a></p>
+<p>If you want to run the database locally:
+(1) download all parts of the main database file (<code>grela_v{version number}.duckdb.part{part number}</code>)
+(2) merge them back into one database file using <code>scripts/merge_db_parts.py</code>
+(3) follow standard DuckDB instructions to establish a connection with the database</p>
 <hr />
 <h2>License</h2>
 <p>The <strong>GreLa code, schema, and derived metadata</strong> are released under<br />
@@ -321,6 +342,14 @@ source corpora:</p>
 <hr />
 <h2>Version History</h2>
 <ul>
+<li>
+<p><strong>0.7</strong></p>
+<ul>
+<li>added missing titles for EMLAP works (formerly wrongly retrieved from an empty "TITLE" attribute)</li>
+<li>removed <code>tokens</code> and <code>sentences</code> with "grela_id" that do not exist in <code>works</code></li>
+<li>upon import, reset "sent_id" for <code>sentences</code> from LAGT, since there are repeatly used "sent_id" in case of works combined from multiple parts (such as "007-051a" and "007-051b" in glaux, but here treated as a single work)</li>
+</ul>
+</li>
 <li>
 <p><strong>0.6</strong></p>
 <ul>

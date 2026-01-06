@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="$PROJECT_DIR$/../EMLAP_ETL/data/emlap_corpus_public/emlap_metadata.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EMLAP_ETL/data/emlap_metadata.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../EMLAP_ETL/data/positions_sample.csv">
           <value>
             <Attribute>
@@ -31,7 +45,91 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/arsenicum.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/besachar.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/etesiae.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/fodina.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/fumus_albus.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/gersa.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/karabe.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/madic.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/sal_aluminosum.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/separatio_per_abscessum.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/emlap_ruland_instances_csv/transuersum.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../dictionary-emlap/data/large_files/emlap_hits/index.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../dictionary-emlap/data/large_files/emlap_ruland_instances_backup/index.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -60,6 +158,13 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../enemy-christianity/data/enemy_sample.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../labyrinth/data/bins.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

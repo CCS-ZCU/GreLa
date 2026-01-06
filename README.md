@@ -19,7 +19,7 @@ CC-BY-SA 4.0 — see the attached `LICENSE.md`.
 This repository contains the code for creating, maintaining, and enriching the **GreLa corpus**.
 
 **GreLa** is a comprehensive corpus of Greek and Latin literature from the 8th c. BCE to the 17th c. CE.  
-It currently contains more than **11,000 works**, **21,000,000 sentences**, and **350,000,000 tokens**.
+It currently (v0.7) cover **11,127 works**, **28,458,277 sentences**, and **437,399,526 tokens**.
 
 GreLa is constructed as a merge of the following corpora:
 
@@ -35,7 +35,7 @@ GreLa is constructed as a merge of the following corpora:
 |:---------------|:----------|:--------------|:------------|
 | lagt           | 2,160     | 2,095,265     | 38,223,149  |
 | cc             | 7,819     | 14,229,691    | 254,770,887 |
-| noscemus       | 975       | 4,637,231     | 54,542,448  |
+| noscemus       | 975       | 11,653,856    | 137,325,383 |
 | emlap          | 100       | 444,211       | 6,477,016   |
 | vulgate        | 73        | 35,254        | 603,091     |
 
@@ -72,46 +72,47 @@ GreLa uses **DuckDB**, an efficient column-oriented analytical database engine o
 ## Table: `sentences`
 
 | Column Name     | Data Type    | Is Nullable | Default Value |
-|-----------------|--------------|-------------|---------------|
-| sentence_id     | VARCHAR      | YES         | N/A           |
-| grela_id        | VARCHAR      | YES         | N/A           |
-| position        | INTEGER      | YES         | N/A           |
-| sent_text       | VARCHAR      | YES         | N/A           |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| position | INTEGER | YES | N/A |
+| sent_text | VARCHAR | YES | N/A |
 
 ## Table: `tokens`
 
-| Column Name | Data Type | Is Nullable | Default Value |
-|------------|-----------|-------------|---------------|
-| sentence_id | VARCHAR  | YES         | N/A           |
-| grela_id    | VARCHAR  | YES         | N/A           |
-| token_text  | VARCHAR  | YES         | N/A           |
-| lemma       | VARCHAR  | YES         | N/A           |
-| pos         | VARCHAR  | YES         | N/A           |
-| ref         | JSON     | YES         | N/A           |
-| char_start  | INTEGER  | YES         | N/A           |
-| char_end    | INTEGER  | YES         | N/A           |
-| token_id    | BIGINT   | YES         | N/A           |
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| sentence_id | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| token_text | VARCHAR | YES | N/A |
+| lemma | VARCHAR | YES | N/A |
+| pos | VARCHAR | YES | N/A |
+| ref | JSON | YES | N/A |
+| char_start | INTEGER | YES | N/A |
+| char_end | INTEGER | YES | N/A |
+| token_id | BIGINT | YES | N/A |
 
 ## Table: `works`
 
-| Column Name                | Data Type | Is Nullable | Default Value |
-|---------------------------|-----------|-------------|---------------|
-| grela_source              | VARCHAR   | YES         | N/A           |
-| grela_id                  | VARCHAR   | YES         | N/A           |
-| author                    | VARCHAR   | YES         | N/A           |
-| title                     | VARCHAR   | YES         | N/A           |
-| not_before                | INTEGER   | YES         | N/A           |
-| not_after                 | INTEGER   | YES         | N/A           |
-| date_random               | INTEGER   | YES         | N/A           |
-| provenience               | VARCHAR   | YES         | N/A           |
-| place_publication         | VARCHAR   | YES         | N/A           |
-| place_geonames            | VARCHAR   | YES         | N/A           |
-| author_viaf               | VARCHAR   | YES         | N/A           |
-| author_wd                 | VARCHAR   | YES         | N/A           |
-| author_gnd                | VARCHAR   | YES         | N/A           |
-| title_viaf                | VARCHAR   | YES         | N/A           |
-| subcorpus_specific_metadata | JSON    | YES         | N/A           |
-
+| Column Name     | Data Type    | Is Nullable | Default Value |
+|-----------------|-------------|-------------|---------------|
+| grela_source | VARCHAR | YES | N/A |
+| grela_id | VARCHAR | YES | N/A |
+| author | VARCHAR | YES | N/A |
+| title | VARCHAR | YES | N/A |
+| not_before | INTEGER | YES | N/A |
+| not_after | INTEGER | YES | N/A |
+| date_random | INTEGER | YES | N/A |
+| provenience | VARCHAR | YES | N/A |
+| place_publication | VARCHAR | YES | N/A |
+| place_geonames | VARCHAR | YES | N/A |
+| author_viaf | VARCHAR | YES | N/A |
+| author_wd | VARCHAR | YES | N/A |
+| author_gnd | VARCHAR | YES | N/A |
+| title_viaf | VARCHAR | YES | N/A |
+| subcorpus_specific_metadata | JSON | YES | N/A |
+| token_count | BIGINT | YES | 0 |
+| sentence_count | BIGINT | YES | 0 |
 ---
 
 ## Getting Started
@@ -152,7 +153,12 @@ When reusing **GreLa data**, please:
 
 ---
 
-## Version History
+## Version History 
+
+* **0.7**
+    * added missing titles for EMLAP works (formerly wrongly retrieved from an empty "TITLE" attribute)
+    * removed `tokens` and `sentences` with "grela_id" that do not exist in `works`
+    * upon import, reset "sent_id" for `sentences` from LAGT, since there are repeatly used "sent_id" in case of works combined from multiple parts (such as "007-051a" and "007-051b" in glaux, but here treated as a single work)
 
 * **0.6**
     * input data in unified format  

@@ -9,12 +9,12 @@ from flask_cors import CORS
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 app.config["JSON_AS_ASCII"] = False
-app.config["MAX_CONTENT_LENGTH"] = 1000 * 1024 * 1024  # 1000 MB
+app.config["MAX_CONTENT_LENGTH"] = 4000 * 1024 * 1024  # 4000 MB
 
 CORS(app)
 
 # ────────────── Constants ──────────────
-DUCKDB_PATH = "/srv/data/grela/grela_v0.6.duckdb"
+DUCKDB_PATH = "/srv/data/grela/grela_v0.7.duckdb"
 PARQUET_DIR = "/srv/webserver/data/grela-api-out"
 QUERY_DIR = "/tmp/grela-queries"
 PUBLIC_URL_PREFIX = "https://ccs-lab.zcu.cz/grela-api-out"

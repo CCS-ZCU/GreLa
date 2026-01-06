@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="16787" />
+    <option name="cachedIndexableFilesCount" value="45651" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -34,12 +34,16 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../dictionary-emlap" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../labyrinth/venv_torch_nlp/lib/python3.12/site-packages/gspread_dataframe.py" root0="SKIP_INSPECTION" />
     <setting file="file:///srv/models/latin-bert/latin_tokenizer.py" root0="SKIP_INSPECTION" />
     <setting file="file:///srv/venvs/latin_venv/lib/python3.12/site-packages/PIL/ImageChops.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -49,26 +53,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.grela-api.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jupyter-vojta/notebooks/LAGT&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.grela-api.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "ai.playground.ignore.import.keys.banner.in.settings": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "last_opened_file_path": "/home/jupyter-vojta/notebooks/dictionary-emlap/scripts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Bookmarks" side_tool="true" />
@@ -78,7 +85,7 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
       <window_info id="R_Remote_Host" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8606419" visible="true" weight="0.21215278" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8606419" visible="true" weight="0.23645833" />
       <window_info id="Commit" order="1" weight="0.25" />
       <window_info id="Structure" order="2" sideWeight="0.4991554" side_tool="true" weight="0.15104166" />
       <window_info id="Pull Requests" order="3" sideWeight="0.5008446" weight="0.15104166" />
@@ -94,37 +101,38 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.16055556" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.2326853" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.24388888" />
       <window_info anchor="bottom" id="Services" order="4" weight="0.2972222" />
       <window_info anchor="bottom" id="Python Packages" order="5" weight="0.22125" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.30833334" />
       <window_info anchor="bottom" id="Jupyter" order="7" weight="0.26123047" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.16055556" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.16099635" />
       <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.1852977" />
       <window_info anchor="right" id="PR AI Assistant" />
       <window_info anchor="right" id="Endpoints" />
+      <window_info anchor="right" id="Remote Host" />
       <window_info anchor="right" id="cn.xcc.lock.gson.toolwindow.JsonAssistantToolWindowFactory" side_tool="true" />
       <window_info anchor="right" id="R_Tools" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Jupyter Variables" side_tool="true" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.16006944" />
-      <window_info anchor="right" id="AIAssistant" order="1" weight="0.16006944" />
+      <window_info anchor="right" id="Notifications" order="0" weight="0.21328124" />
+      <window_info anchor="right" id="AIAssistant" order="1" weight="0.38298613" />
       <window_info anchor="right" id="Database" order="2" weight="0.24201389" />
       <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
       <window_info anchor="right" id="Maven" order="4" weight="0.25" />
       <window_info anchor="right" id="Plots" order="5" weight="0.1" />
       <window_info anchor="right" id="ElectroJunToolWindow" order="6" />
       <window_info anchor="right" id="Tabnine Chat" order="7" weight="0.2621528" />
+      <window_info anchor="right" id="Jupyter Variables" order="8" side_tool="true" weight="0.21328124" />
     </layout>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../LAGT" />
-      <recent name="$PROJECT_DIR$/../LAGT/scripts" />
-      <recent name="$PROJECT_DIR$/../corpus-corporum/scripts" />
-      <recent name="$PROJECT_DIR$/../dictionary-emlap/data/large_files" />
       <recent name="$PROJECT_DIR$/../dictionary-emlap/scripts" />
+      <recent name="/srv/data/grela" />
+      <recent name="$PROJECT_DIR$/../enemy-christianity/scripts" />
+      <recent name="$PROJECT_DIR$/../labyrinth/scripts" />
+      <recent name="$PROJECT_DIR$/../LAGT" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../corpus-corporum/data/lemmatized-xmls" />
@@ -137,8 +145,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-PY-253.28294.336" />
-        <option value="bundled-python-sdk-0978a7220b69-9867c7d4c0a4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.28294.336" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PY-253.29346.142" />
+        <option value="bundled-python-sdk-f2b7a9f6281b-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.142" />
       </set>
     </attachedChunks>
   </component>
@@ -223,7 +231,27 @@
       <workItem from="1765274688098" duration="3430000" />
       <workItem from="1765278228918" duration="149000" />
       <workItem from="1765278388287" duration="17090000" />
-      <workItem from="1765320130426" duration="518000" />
+      <workItem from="1765320130426" duration="24528000" />
+      <workItem from="1765370290594" duration="6706000" />
+      <workItem from="1765379758236" duration="10274000" />
+      <workItem from="1765405166252" duration="15069000" />
+      <workItem from="1765544146135" duration="5181000" />
+      <workItem from="1765559644251" duration="14341000" />
+      <workItem from="1765794412763" duration="10348000" />
+      <workItem from="1765834589609" duration="599000" />
+      <workItem from="1765836283187" duration="1340000" />
+      <workItem from="1765877404646" duration="166000" />
+      <workItem from="1765877712196" duration="3061000" />
+      <workItem from="1765880935097" duration="1776000" />
+      <workItem from="1765895881194" duration="9704000" />
+      <workItem from="1765978471814" duration="7421000" />
+      <workItem from="1766003904479" duration="23558000" />
+      <workItem from="1766057496833" duration="7309000" />
+      <workItem from="1766092290508" duration="1128000" />
+      <workItem from="1766096860986" duration="34250000" />
+      <workItem from="1766184259866" duration="16799000" />
+      <workItem from="1766511993948" duration="515000" />
+      <workItem from="1766512532487" duration="9449000" />
     </task>
     <servers />
   </component>
