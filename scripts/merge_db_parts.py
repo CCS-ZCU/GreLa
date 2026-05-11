@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# run with: python glue_parts.py grela_v0.6.duckdb
+# run with: python merge_db_parts.py grela_v0.6.duckdb
 
 import glob
 import sys
